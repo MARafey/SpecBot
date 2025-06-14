@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    environment:
+      - FLASK_APP=server.py
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    volumes:
+      - ./Backend:/app
+      - backend_data:/app/data
+      - backend_results:/app/Results
+      - backend_jsons:/app/Jsons
+      - backend_inputs:/app/Inputs
+      - backend_executables:/app/executables
+    command: ["flask", "run", "--reload"]
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    restart: unless-stopped
+    depends_on:
+      - backend
+    volumes:
+      - ./Frontend:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  backend_data:
+    driver: local
+  backend_results:
+    driver: local
+  backend_jsons:
+    driver: local
+  backend_inputs:
+    driver: local
+  backend_executables:
+    driver: local
