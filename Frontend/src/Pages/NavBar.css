@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed; /* Fix the navbar to the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make it span the full width of the page */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #c9f2c9;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a clean look */
+  margin: 0; /* Remove any default margin */
+  border-bottom: 1px solid #ddd; /* Optional: Add a subtle border for separation */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between the logo and title */
+}
+
+.navbar-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.navbar-title {
+  font-size: 29px;
+  font-weight: bold;
+  cursor: pointer; /* Make it clickable */
+  color: #282b29;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ------------ Navigation Buttons ---------------- */
+.nav-btn {
+  background-color: transparent;
+  border: 2px solid #0a3f0c;
+  color: #0a3f0c;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover {
+  background-color: #0a3f0c;
+  color: white;
+}
+
+/* ------------Login Button---------------- */
+.login-btn {
+  background-color: transparent;
+  border: 2px solid #0a3f0c;
+  color: #0a3f0c;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  background: #37c43b;
+  color: ghostwhite;
+}
+/* ------------------Login Button End-----------------*/
+
+/* Login Avatar from HomePage.css */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ea0d31;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}

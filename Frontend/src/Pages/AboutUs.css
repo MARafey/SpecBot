@@ -1,0 +1,189 @@
+/* About Us Page Styles */
+.about-container {
+  margin-top: 100px;
+  text-align: center;
+  font-family: Arial, serif;
+  background-image: url("../../public/background.png");
+  color: #282b29;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 70%; /* Added width of 80% */
+  margin-left: auto; /* Center the container */
+  margin-right: auto; /* Center the container */
+}
+
+.about-content {
+  max-width: 1200px; /* Increased from 800px to 1200px */
+  margin: 30px auto;
+  background-color: #eeffee;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #94f2ce;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h1 {
+  font-size: 36px; /* Increased from 28px */
+  color: #282b29;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-content h2 {
+  font-size: 28px; /* Increased from 22px */
+  color: #282b29;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.about-content h3 {
+  font-size: 24px; /* Increased from 20px */
+  color: #282b29;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 18px; /* Increased from 16px */
+  line-height: 1.6;
+  color: #282b29;
+  margin-bottom: 20px;
+}
+
+/* Feature list styling */
+.features {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* horizontal */
+}
+
+.features li {
+  background-color: #d4f8e3;
+  font-size: 22px;
+  color: #444;
+  line-height: 1.5;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid transparent; /* Default border (invisible) */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    border-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.features li:hover {
+  background-color: #b2f0c9;
+  transform: scale(1.05);
+  cursor: pointer;
+  border-color: #77e1a3; /* Change border color on hover */
+}
+
+/* Workflow image sections */
+.workflow-section {
+  margin: 30px 0;
+}
+
+.workflow-image {
+  width: 90%;
+  max-width: 700px;
+  height: 300px;
+  object-fit: contain;
+  border: 2px solid #94f2ce;
+  border-radius: 10px;
+  margin: 15px auto;
+  background-color: #f5f5f5;
+}
+
+/* Team members styling - adjusted to ensure they fit in one row */
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Reduced gap from 30px to 20px */
+  margin-top: 20px;
+}
+
+.team-member {
+  background-color: #d4f8e3;
+  padding: 20px;
+  border-radius: 10px;
+  width: 270px;
+  border: 2px solid transparent;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    border-color 0.3s ease;
+}
+.team-member:hover {
+  background-color: #b2f0c9;
+  transform: scale(1.05);
+  border-color: #77e1a3;
+}
+
+.team-avatar {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  border: 3px solid #77e1a3;
+  border-radius: 10px;
+}
+
+.team-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-id {
+  font-size: 16px;
+  color: #444;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.supervisor {
+  background-color: #d4f8e3;
+  padding: 20px;
+  border-radius: 10px;
+  width: 270px;
+  margin: 20px auto;
+  border: 2px solid transparent;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    border-color 0.3s ease;
+}
+
+.supervisor:hover {
+  background-color: #b2f0c9;
+  transform: scale(1.05);
+  border-color: #77e1a3;
+}
+
+/* Partner logos section */
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px 0;
+}
+
+.partner-logo {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  padding: 5px;
+  background-color: white;
+  border-radius: 15px;
+  border: 3px solid #94f2ce;
+}
+
+.partner-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

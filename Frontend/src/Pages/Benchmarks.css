@@ -1,0 +1,192 @@
+.benchmarks-page {
+  background-image: url("../../public/background.png");
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.benchmarks-container {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.benchmarks-main-title {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 700;
+}
+
+.benchmarks-title {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #305a3e;
+  text-align: center;
+}
+
+.benchmarks-description {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+  color: #444;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.github-link {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.github-link a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.3rem;
+  background-color: #129462;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.github-link a:hover {
+  background-color: #404448;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.benchmarks-content {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.metrics-selector {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  background-color: #ebfaf1;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.metrics-selector h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  color: #2c503b;
+  font-weight: 600;
+  border-bottom: 2px solid #d1d9e6;
+  padding-bottom: 0.8rem;
+}
+
+.metric-button {
+  padding: 0.9rem 1.2rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: left;
+  transition: all 0.25s ease;
+  color: #444;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.metric-button:hover {
+  background-color: #dcf3ea;
+  transform: scale(1.05);
+  color: #21a774;
+  padding-left: 1.5rem;
+}
+
+.metric-button::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #94f2ce;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.metric-button:hover::before {
+  opacity: 1;
+  left: 8px;
+}
+
+.metric-button.active {
+  background-color: #129462;
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+  font-weight: bold;
+}
+
+.metric-button.active::before {
+  opacity: 0;
+}
+
+.chart-container {
+  flex: 1;
+  background-color: #f0faf5;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  height: 550px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.3rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .benchmarks-content {
+    flex-direction: column;
+  }
+
+  .metrics-selector {
+    flex: auto;
+    width: 100%;
+  }
+
+  .chart-container {
+    height: 400px;
+  }
+
+  .benchmarks-main-title {
+    font-size: 2.8rem;
+  }
+
+  .benchmarks-title {
+    font-size: 2.3rem;
+  }
+
+  .benchmarks-description {
+    font-size: 1.1rem;
+  }
+}

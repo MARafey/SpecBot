@@ -1,0 +1,441 @@
+/* Main container and body styles */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  background-image: url("../../public/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Analytics container styles */
+.analytics-container {
+  padding: 2rem;
+  max-width: 1600px; /* Increased from 1200px to allow for wider tables */
+  margin: 70px auto 30px; /* Added top margin to prevent overlap with navbar */
+  flex: 1;
+}
+
+/* Header styles */
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* View toggle container */
+.view-toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.toggle-button {
+  transition: all 0.3s ease;
+  min-width: 120px;
+
+  font-family: "Arial", sans-serif;
+  background-color: #e0e0e0;
+  color: #282b29;
+  border: none;
+  padding: 12px 24px; /* Slightly smaller padding to fit in filter section */
+  cursor: pointer;
+  font-size: 16px; /* Slightly smaller than try-free-btn */
+  font-weight: 600;
+  border-radius: 8px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.toggle-button.active {
+  background-color: #94f2ce;
+  border-color: #77e1a3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button:hover {
+  background-color: #e0e0e0;
+}
+
+.toggle-button.active:hover {
+  background-color: #77e1a3;
+}
+
+/* Content container */
+.content-container {
+  background-color: #eeffeee1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #94f2ce;
+}
+
+/* Loading container and styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  gap: 3rem;
+}
+
+/* Modern loader ring animation */
+.loader-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loader-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 6px solid #94f2ce;
+  border-radius: 50%;
+  animation: loader-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #94f2ce transparent transparent transparent;
+}
+
+.loader-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.loader-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.loader-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes loader-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-card {
+  background-color: #eeffee;
+  border: 1px solid #94f2ce;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 60px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-card h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.loading-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+  font-weight: 600;
+}
+
+.loading-card:hover {
+  background-color: #d4f8e3;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Error message styles */
+.error-message {
+  color: #d9534f;
+  padding: 1.5rem;
+  background-color: #f9f2f2;
+  border-radius: 8px;
+  border-left: 5px solid #d9534f;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+}
+
+/* Table container styles */
+.table-container {
+  background-color: #fbfffb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.table-container h3 {
+  margin: 1rem 0;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+/* Table wrapper - removed max-height and overflow-y to show full table */
+.table-wrapper {
+  width: 100%;
+}
+
+/* Table styles */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #eeffee;
+  table-layout: fixed; /* Makes columns have equal width */
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #ddd;
+  padding: 12px 16px; /* Increased padding for wider cells */
+  text-align: center;
+  word-wrap: break-word; /* Ensures text wraps inside cells */
+}
+
+.results-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #eeffee;
+}
+
+.results-table tr:hover {
+  background-color: #bcffe5ea;
+}
+
+.total-row {
+  background-color: #f0f8f0 !important;
+  font-weight: bold;
+}
+
+/* File selection dropdown styles */
+.file-selection-dropdown {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-size-adjust: 40%;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
+}
+
+.file-selection-dropdown label {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.file-selection-dropdown select {
+  text-align: center;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  width: 60%;
+  max-width: 500px;
+  font-family: "Arial", sans-serif;
+  background-color: #bcffe5ea;
+  color: #282b29;
+  border: none;
+  cursor: pointer;
+  font-size: 15px; /* Slightly smaller than try-free-btn */
+  font-weight: 600;
+  border-radius: 8px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.file-selection-dropdown select:focus {
+  outline: none;
+  border-color: #e6f7f0;
+  box-shadow: 0 0 0 2px rgba(239, 252, 247, 0.795);
+}
+
+/* Graph view container styles - changed to column layout */
+.graph-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Metrics sidebar styles - changed to horizontal metrics bar */
+.metrics-sidebar {
+  width: 100%;
+  background-color: #fbfffe;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.metrics-sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.metrics-list {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid #b8f1dcc2;
+  background-color: #f2fffa;
+  border-radius: 15px;
+}
+
+.metrics-list li {
+  margin-bottom: 0.5rem;
+}
+
+.metric-button {
+  background-color: #fbfffe;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.metric-button:hover {
+  background-color: #fbfffe;
+}
+
+.metric-button.active {
+  background-color: #fbfffe;
+  color: #282b29;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart section styles */
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chart-type-info {
+  background-color: #fbfffe;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.chart-type-info p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+}
+
+.chart-container {
+  background-color: #fbfffe;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 500px; /* Made taller for better visualization */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-info {
+  text-align: center;
+  padding: 0.5rem;
+  font-style: italic;
+  color: #666;
+  background-color: #fbfffe;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .metrics-list {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .chart-container {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-container {
+    padding: 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .view-toggle-container {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .toggle-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .chart-container {
+    min-height: 300px;
+    padding: 1rem;
+  }
+
+  .loading-card {
+    padding: 1.5rem;
+  }
+
+  .metrics-sidebar {
+    padding: 1rem;
+  }
+
+  .metric-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

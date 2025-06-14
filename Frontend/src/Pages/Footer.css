@@ -1,0 +1,39 @@
+/* Ensures the footer stays at the bottom of the page */
+.footer {
+  background-color: #b4f0b4;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  margin-top: auto;
+  width: 100%; /* Ensures the footer spans the page width */
+  font-family: Arial, serif;
+  font-weight: bold; /* Apply bold font */
+}
+
+.footer-text p {
+  font-size: 20px; /* Adjust font size */
+  font-family: Arial, serif; 
+  font-weight: bold; /* Ensure the text is bold */
+  margin-top: 5px; /* Add spacing above the paragraph */
+  margin-bottom: 0; /* Remove bottom margin if needed */
+  color: #282b29;
+}
+
+/* Footer Icon Styling */
+.footer .social-link .icon {
+  width: 50px; /* Matching size to the login page */
+  height: 50px;
+  margin: 0 10px; /* Spacing between icons */
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effects for Social Icons */
+.footer .social-link:hover .icon {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  filter: brightness(1.2); /* Slightly brighten the icons on hover */
+}

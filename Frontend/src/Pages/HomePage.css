@@ -1,0 +1,237 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  background-image: url("../../public/background.png");
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.content-wrapper {
+  padding-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+}
+
+.content {
+  width: 70%; /* page width */
+  padding: 0 20px; /* Reduced padding from 40px to 20px */
+}
+
+/* Heading */
+.heading-hp {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+/* Hero Section with Image and Text */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  font-size: 15px;
+  line-height: 2;
+  color: #444;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  margin-top: 5px;
+  margin-left: 5px;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 140%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Added transition for hover effect */
+}
+
+/* Buttons */
+.get-started-btn,
+.try-free-btn {
+  font-family: "Arial", sans-serif;
+  background-color: #94f2ce;
+  color: #282b29;
+  border: none;
+  margin-top: 30px;
+  padding: 16px 40px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.get-started-btn:hover,
+.try-free-btn:hover {
+  background-color: #77e1a3;
+  transform: scale(1.05);
+}
+
+/* Features Section */
+.subheading {
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  color: #333333;
+  text-align: center;
+}
+
+.features {
+  list-style: none;
+  margin: 30px auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.features li {
+  background-color: #d4f8e3;
+  font-size: 22px;
+  color: #444;
+  line-height: 1.5;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid transparent; /* Default border (invisible) */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    border-color 0.3s ease;
+}
+
+.features li:hover {
+  background-color: #b2f0c9;
+  transform: scale(1.05);
+  cursor: pointer;
+  border-color: #77e1a3; /* Change border color on hover */
+}
+
+/* Promo Box */
+.promo-box {
+  background-color: #eeffee;
+  border: 1px solid #94f2ce;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 60px auto;
+  width: 80%; /* Increased from 80% to 90% to fit better within the 70% content width */
+  max-width: 800px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo-box h3,
+.promo-box h2,
+.promo-box p {
+  color: #282b29;
+}
+
+.promo-box h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.promo-box h3 {
+  font-size: 26px;
+}
+
+.promo-box p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* Video Demo */
+.extension-heading {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 60px;
+  color: #333;
+  text-align: center;
+}
+
+.demo-video {
+  margin: 40px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.demo {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .content {
+    width: 90%; /* Increased width on smaller screens */
+  }
+
+  .heading-hp {
+    font-size: 36px;
+    white-space: normal;
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+  }
+
+  .features li {
+    font-size: 18px;
+  }
+
+  .promo-box {
+    padding: 30px;
+    width: 95%;
+  }
+
+  .promo-box h2 {
+    font-size: 32px;
+  }
+
+  .promo-box h3 {
+    font-size: 22px;
+  }
+}
