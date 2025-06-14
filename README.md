@@ -168,28 +168,6 @@ SpecBot/
 - `REACT_APP_API_URL`: Backend API endpoint (default: http://localhost:5000)
 - `NODE_ENV`: React environment mode
 
-### Hardware Requirements
-
-- **Minimum**: 2 CPU cores, 4GB RAM
-- **Recommended**: 4+ CPU cores, 8GB+ RAM
-- **Optimal**: 8+ CPU cores, 16GB+ RAM for complex code analysis
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **Import Errors**: Ensure all Python dependencies are installed
-2. **Docker Issues**: Check that ports 3000 and 5000 are available
-3. **Performance**: Increase Docker memory allocation for large code analysis
-4. **Browser Compatibility**: Use Chrome, Firefox, or Edge for best experience
-
-### Debug Mode
-
-```bash
-# Start with debug logging
-FLASK_ENV=development docker-compose up
-```
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -198,12 +176,9 @@ FLASK_ENV=development docker-compose up
 4. Push to the branch (`git push origin feature/new-optimization`)
 5. Create a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
-
+- PCN Lab for the guidance
 - OpenMP community for parallelization standards
 - Valgrind team for performance analysis tools
 - React and Flask communities for excellent frameworks
